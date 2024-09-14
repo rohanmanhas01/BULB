@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        .img {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .but {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px;
+            cursor: pointer;
+            background-color: aliceblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> ON/OFF THE BULB </h1>
+
+    <div class="img">
+        <img src="C:\Users\sulin\Downloads\10w-gls-light-bulb-1000x1000-removebg-preview.png" alt="image">
+    </div>
+    <div class="but">
+
+        <button>CLICK ME</button>
+    </div>
+    <script>
+        let but = document.querySelector("button");
+        let mode = "light";
+
+
+        but.addEventListener("click", () => {
+            if (mode === "light") {
+                mode = "dark"
+                document.body.style.backgroundColor = "black";
+                document.querySelector("h1").style.color = "white";
+            }
+            else {
+                mode = "light";
+                document.body.style.backgroundColor = "white";
+                document.querySelector("h1").style.color = "black";
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
